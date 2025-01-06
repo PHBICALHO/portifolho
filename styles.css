@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: 80px; /* Reduzi o tamanho da fonte */
+    margin-bottom: 10px; /* Reduzi a margem inferior */
+}
+
+p {
+    font-size: 40px; /* Diminuí o tamanho da fonte */
+    margin-bottom: 10px; /* Menor espaço abaixo do parágrafo */
+}
+
+section {
+    place-items: center;
+    align-items: center;
+    min-height: 90vh; /* Reduzi a altura mínima */
+    gap: 1px; /* Menor espaço entre os elementos da seção */
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+    transform: translateX(0);
+}
+
+.lista {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin: 40px;
+}
+h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento entre o título e as logos */
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: white; /* Cor do título */
+}
+
+.dolado {
+    display: flex; /* Define um layout flexível para cada item */
+    flex-direction: column; /* Organiza os elementos (texto e imagem) em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre texto e imagem */
+}
+
+.dolado.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.logo {
+    max-height: 80px; /* Reduzi o tamanho máximo da imagem */
+    object-fit: contain;
+    border-radius: 5px; /* Menor curvatura */
+}
+
+/* Estilo para a seção "Welcome" */
+/* Estilo para a seção de formação */
+.formacao {
+    background-color: rgba(0, 0, 0, 0); /* Fundo cinza escuro */
+    color: white; /* Texto branco */
+    padding: 10px;
+    width: 600px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    font-family: roboto condensed;
+    box-sizing: border-box;
+}
+
+.formacao h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00bfff; /* Azul claro */
+}
+
+.formacao .conteudo h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.formacao p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.formacao h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #00bfff;
+}
+
+.formacao ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.formacao ul li {
+    margin-bottom: 10px;
+    line-height: 1.5; /* Melhor espaçamento entre linhas */
+}
+
+
+.caixa {
+    position: relative;
+    width: 800px;
+    height: 910px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin: 40px;
+}
+
+.caixa::before, .caixa::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,#ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+    background-size: 300%;
+    border-radius: 10px;
+    z-index: -1; /* Fica atrás da caixa */
+    animation: animateBorder 10s linear infinite;
+}
+.caixa::after{
+    filter: blur(50px);
+}
+
+/* Animação do gradiente */
+@keyframes animateBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
