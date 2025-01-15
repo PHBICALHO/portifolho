@@ -201,7 +201,7 @@ h1 {
 /* Responsividade para celulares (telas até 480px) */
 @media (max-width: 480px) {
     body {
-        padding: 20px; /* Ajusta o padding geral para celulares */
+        padding: 35px; /* Ajusta o padding geral para celulares */
     }
 
     h2 {
