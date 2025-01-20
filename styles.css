@@ -10,7 +10,7 @@ body {
     background-color: black;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
-    padding: 35px; /* Adiciona um padding geral no corpo da página */
+    padding: 40px; /* Adiciona um padding geral no corpo da página */
 }
 
 h2 {
@@ -201,7 +201,7 @@ h1 {
 /* Responsividade para celulares (telas até 480px) */
 @media (max-width: 480px) {
     body {
-        padding: 35px; /* Ajusta o padding geral para celulares */
+        padding: 10px; /* Ajusta o padding geral para celulares */
     }
 
     h2 {
